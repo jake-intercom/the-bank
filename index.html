@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Bank</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Georgia', serif;
+      background: #f8f6f1;
+      color: #1a1a2e;
+    }
+
+    header {
+      background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+      color: #d4af37;
+      padding: 1.5rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header h1 {
+      font-size: 1.8rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    nav a {
+      color: #f8f6f1;
+      text-decoration: none;
+      margin-left: 2rem;
+      font-size: 0.95rem;
+      letter-spacing: 1px;
+    }
+
+    nav a:hover { color: #d4af37; }
+
+    .hero {
+      background: linear-gradient(rgba(26, 26, 46, 0.7), rgba(22, 33, 62, 0.7)),
+                  url('https://images.unsplash.com/photo-1554244933-d876deb6b2ff?w=1400&q=80') center/cover;
+      padding: 6rem 2rem;
+      text-align: center;
+      color: #fff;
+    }
+
+    .hero h2 {
+      font-size: 2.8rem;
+      margin-bottom: 1rem;
+      letter-spacing: 1px;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      max-width: 600px;
+      margin: 0 auto 2rem;
+      opacity: 0.9;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 0.9rem 2.5rem;
+      background: #d4af37;
+      color: #1a1a2e;
+      text-decoration: none;
+      font-weight: bold;
+      letter-spacing: 1px;
+      border-radius: 4px;
+      transition: background 0.2s;
+    }
+
+    .btn:hover { background: #c49b2a; }
+
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+      padding: 4rem 2rem;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 8px;
+      padding: 2rem;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+      text-align: center;
+    }
+
+    .card .icon {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .card h3 {
+      margin-bottom: 0.75rem;
+      color: #16213e;
+    }
+
+    .card p {
+      color: #555;
+      line-height: 1.6;
+      font-size: 0.95rem;
+    }
+
+    .rates {
+      background: #1a1a2e;
+      color: #f8f6f1;
+      padding: 3rem 2rem;
+      text-align: center;
+    }
+
+    .rates h2 {
+      color: #d4af37;
+      margin-bottom: 2rem;
+      font-size: 1.8rem;
+    }
+
+    .rates-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1.5rem;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .rate-item {
+      padding: 1.5rem;
+      border: 1px solid #d4af3744;
+      border-radius: 8px;
+    }
+
+    .rate-item .value {
+      font-size: 2rem;
+      color: #d4af37;
+      font-weight: bold;
+    }
+
+    .rate-item .label {
+      margin-top: 0.5rem;
+      font-size: 0.9rem;
+      opacity: 0.8;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      font-size: 0.85rem;
+      color: #888;
+      border-top: 1px solid #ddd;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>The Bank</h1>
+    <nav>
+      <a href="#features">Services</a>
+      <a href="#rates">Rates</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h2>Banking You Can Trust</h2>
+    <p>Simple, secure, and straightforward banking for everyday people. No hidden fees, no surprises.</p>
+    <a href="#features" class="btn">Explore Our Services</a>
+  </section>
+
+  <section id="features" class="features">
+    <div class="card">
+      <div class="icon">🏦</div>
+      <h3>Savings Accounts</h3>
+      <p>Grow your money with our competitive interest rates. No minimum balance required to get started.</p>
+    </div>
+    <div class="card">
+      <div class="icon">💳</div>
+      <h3>Checking Accounts</h3>
+      <p>Fee-free checking with unlimited transactions. Your money, your way, no strings attached.</p>
+    </div>
+    <div class="card">
+      <div class="icon">🏠</div>
+      <h3>Home Loans</h3>
+      <p>Make your dream home a reality with flexible mortgage options and personalized guidance.</p>
+    </div>
+  </section>
+
+  <section id="rates" class="rates">
+    <h2>Today's Rates</h2>
+    <div class="rates-grid">
+      <div class="rate-item">
+        <div class="value">4.25%</div>
+        <div class="label">Savings APY</div>
+      </div>
+      <div class="rate-item">
+        <div class="value">6.50%</div>
+        <div class="label">30-Year Fixed</div>
+      </div>
+      <div class="rate-item">
+        <div class="value">5.85%</div>
+        <div class="label">15-Year Fixed</div>
+      </div>
+    </div>
+  </section>
+
+  <footer id="contact">
+    <p>&copy; 2026 The Bank. This is a demo site. Not a real bank. Please don't deposit money here.</p>
+  </footer>
+
+</body>
+</html>
